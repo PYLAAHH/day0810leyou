@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*let声明局部变量*/
+        for (let i = 0; i < 5; i++) {
+            console.log(i);
+        }
+
+        //console.log(i+"---");
+        const num = 200;  //const:声明常量  值不可以更改
+        //  console.log(num);
+        var str = "hello  vue!";
+        var b = str.includes("vue2");
+        var b2 = str.endsWith("vue");
+        var b3 = str.startsWith("vue");
+        console.log(b3);
+       //声明一个string
+        var info="abcdefg";
+        console.log(info);
+        var  info2=`6782683
+        728238283
+        8273927392`;
+        //console.log(info2);
+        //定义数组
+        let  arr=[10,20,30,40];
+        //数组解钩函数
+        const [x,y,z,i]=arr;
+        console.log(x,y,z,i);
+        //定义对象
+        let   person={
+            id:1001,
+            name:"Jack",
+            age:20,
+            language:['java','python','c++'],
+            eat: function (food) {
+                console.log(this.name+"吃"+food);
+            },
+           /* eat2:food=>{console.log(person.name+"吃"+food);},*/
+            eat3(food){
+            console.log(person.name+"吃"+food);
+            }
+          };
+        function hello(person) {
+            console.log("hello," + person.name)
+        }
+        console.log("-----")
+        hello(person);
+
+        var  h1=({name})=> console.log("hello," + name);
+        console.log("2222222222")
+        h1(person);
+
+        //对象解构函数
+        const {id,name,age,language}=person;
+        console.log(id);
+        console.log(name);
+        console.log(age);
+        console.log(language);
+      //函数的参数默认值
+        //es6  可以为函数的参数指定默认值
+        function add(a,b=2){
+           // b=b||1;
+            return  a+b;
+         }
+        console.log(add(2));
+        //只有一个参数
+        var  print1=function(obj){
+            console.log(obj);
+        }
+        var  print2=(obj) => {console.log(obj)};
+        var  print3=function(a,b){
+            console.log(a+b);
+        }
+       var  p3=(a,b) => console.log(a+b);
+        let arr2 = ['1','20','-5','3'];
+        console.log(arr2)
+        //数组arr2中的String    int
+        arr2=arr2.map(s => parseInt(s));
+        console.log(arr2);
+     </script>
+</head>
+<body>
+
+</body>
+</html>
